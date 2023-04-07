@@ -3,7 +3,7 @@ import { Search } from '@mui/icons-material'
 
 const Searchbar = () => {
   return (
-    <div className='px-2 border rounded-md flex items-center justify-between bg-white h-10 w-[30%]'>
+    <div className='w-[50%] px-2 border rounded-md flex items-center justify-between bg-white h-10 lg:w-[30%]'>
       <input 
         type="search" 
         name="search" 

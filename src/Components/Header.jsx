@@ -4,9 +4,9 @@ import Searchbar from './Searchbar'
 
 const Header = () => {
   return (
-    <div className='flex h-[10vh] px-10 items-center justify-between bg-slate-900'>
-        <img src={logo} alt="Logo" className='w-[3%]' />
-        <Searchbar />
+    <div className='flex h-[10vh] px-5 md:px-10 items-center justify-between bg-black'>
+      <img src={logo} alt="Logo" className='w-[10%] sm:w-[5%] lg:w-[3%]' />
+      <Searchbar />
     </div>
   )
 }

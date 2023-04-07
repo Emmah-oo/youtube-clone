@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Feed from "./Components/Feed";
 import Header from "./Components/Header";
+import VideoDetails from "./Components/VideoDetails";
+import ChannelDetails from "./Components/ChannelDetails";
 
 function App() {
   return (
@@ -9,9 +11,9 @@ function App() {
      <Header />
      <Routes>
       <Route exact path="/" element={<Feed />} />
-      {/* <Route path="/video/:id" element={} />
-      <Route path="/channel/:id" element={} />
-      <Route path="/search/searchTerm" element={} /> */}
+      <Route path="/video/:id" element={<VideoDetails />} />
+      <Route path="/channel/:id" element={<ChannelDetails />} />
+      {/* <Route path="/search/searchTerm" element={} /> */}
      </Routes>
      </BrowserRouter>
     </div>
