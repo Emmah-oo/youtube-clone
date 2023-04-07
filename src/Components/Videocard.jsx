@@ -12,7 +12,7 @@ const Videocard = ({ video }) => {
         />
       </Link>
       <h1 className='my-5 font-bold text-[1rem]'>{video?.snippet?.title || demoChannelTitle}</h1>
-      <Link to={`/channel/${video.id.channelId}`}> 
+      <Link to={`/channel/${video.snippet.channelId}`}> 
         <h2 className='font-bold text-[1rem]'>{video?.snippet?.channelTitle.slice(0, 50)}</h2>
       </Link>
     </div>
