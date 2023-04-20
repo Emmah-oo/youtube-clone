@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { demoThumbnailUrl, demoChannelTitle } from '../utils/constants'
+import { demoThumbnailUrl, demoChannelTitle, demoVideoTitle } from '../utils/constants'
+import { BsFillPatchCheckFill } from 'react-icons/bs'
 
 const Videocard = ({ video }) => {
   return (
@@ -11,9 +12,10 @@ const Videocard = ({ video }) => {
           className='w-[100%]'
         />
       </Link>
-      <h1 className='mb-5 font-bold text-[1rem]'>{video?.snippet?.title || demoChannelTitle}</h1>
-      <Link to={`/channel/${video.snippet.channelId}`}> 
-        <h2 className='font-bold text-[1rem]'>{video?.snippet?.channelTitle.slice(0, 50)}</h2>
+      <h1 className='mb-5 font-bold text-[1rem]'>{video?.snippet?.title || demoVideoTitle}</h1>
+      <Link to={`/channel/${video.snippet.channelId}`} className='flex items-center gap-2'> 
+        <h2 className='font-bold text-[1rem]'>{video?.snippet?.channelTitle.slice(0, 50) || demoChannelTitle}</h2>
+        <BsFillPatchCheckFill />
       </Link>
     </div>
   )
