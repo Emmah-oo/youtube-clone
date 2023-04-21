@@ -8,7 +8,6 @@ import Videos from './Videos'
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState('New')
   const [videos, setVideos] = useState(null)
-  // console.log(videos)
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)

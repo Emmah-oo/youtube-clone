@@ -8,9 +8,6 @@ const ChannelDetails = () => {
 const [channelDetails, setChannelDetails] = useState(null)
 const [videos, setVideos] = useState()
 const { id } = useParams()
-//   console.log(channelDetails)
-  console.log(videos)
-
   useEffect(() => {
     fetchFromAPI(`channels?part=snippet&id=${id}`)
         .then((data) => setChannelDetails(data?.items[0]))
@@ -19,9 +16,9 @@ const { id } = useParams()
         .then((data) => setVideos(data.items))
   },[id])
   return (
-    <div>
-        <div className='h-[20vh] w-[100%] bg-purple-700'></div>
-        <div className='flex flex-col items-center justify-center my-4'>
+    <div className='mt-[10vh]'>
+        {/* <div className='h-[20vh] w-[100%] bg-purple-700'></div> */}
+        <div className='flex flex-col items-center justify-center my-4 mt-'>
             <div className='w-[15%]'>
                 <img src={channelDetails?.snippet?.thumbnails?.high?.url || demoProfilePicture} alt=""
                 className='w-[100%] border-2 rounded-full border-black'

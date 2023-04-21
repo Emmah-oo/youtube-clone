@@ -3,7 +3,7 @@ import { logo } from '../utils/constants'
 import Searchbar from './Searchbar'
 import { Link } from 'react-router-dom'
 
-const Header = ({ searchTerm, setSearchTerm }) => {
+const Header = () => {
   return (
     <div className='fixed top-0 left-0 w-[100%] flex h-[8vh] px-5 md:px-10 items-center justify-between bg-black'>
       <Link to={'/'}>
